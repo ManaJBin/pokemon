@@ -1,3 +1,4 @@
+// classes.js
 class Sprite {
 	constructor({
 		position, 
