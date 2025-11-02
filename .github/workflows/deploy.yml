@@ -17,10 +17,10 @@ jobs:
 
       - name: 🔁 Create PR to main using latest commit
         uses: peter-evans/create-pull-request@v5
-        with:
+        with:        
           token: ${{ secrets.GITHUB_TOKEN }}
           base: main
-          branch: develop
+          branch: auto-pr-${{ github.sha }}
           title: ${{ github.event.head_commit.message }}
           body: ${{ github.event.head_commit.message }}
           reviewers: Manaj93
